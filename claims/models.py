@@ -4,6 +4,7 @@ from django.db import models
 import uuid
 from django.db import models
 
+
 class Member(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     member_id = models.CharField(max_length=20, unique=True)
@@ -13,7 +14,7 @@ class Member(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.full_name
+        return self.member_id
 
 
 class Provider(models.Model):
@@ -23,7 +24,7 @@ class Provider(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.name
+        return self.provider_id
 
 
 class Procedure(models.Model):
@@ -42,6 +43,7 @@ class Diagnosis(models.Model):
     description = models.CharField(max_length=255)
     def __str__(self):
         return self.diagnosis_code
+
 
 class Claim(models.Model):
 

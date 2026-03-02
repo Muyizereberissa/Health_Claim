@@ -7,7 +7,6 @@ class ClaimService:
 
     @staticmethod
     def process_claim(data):
-
         try:
             member = Member.objects.get(member_id=data["member_id"])
         except Member.DoesNotExist:

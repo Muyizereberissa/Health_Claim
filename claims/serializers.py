@@ -1,15 +1,12 @@
 from rest_framework import serializers
-from .models import Claim, Member, Provider, Procedure, Diagnosis
+from .models import Claim
 
-class ClaimCreateSerializer(serializers.ModelSerializer):
-    member = serializers.PrimaryKeyRelatedField(queryset=Member.objects.all())
-    provider = serializers.PrimaryKeyRelatedField(queryset=Provider.objects.all())
-    procedure = serializers.PrimaryKeyRelatedField(queryset=Procedure.objects.all())
-    diagnosis = serializers.PrimaryKeyRelatedField(queryset=Diagnosis.objects.all())
-
-    class Meta:
-        model = Claim
-        fields = ["member", "provider", "procedure", "diagnosis", "claim_amount"]
+class ClaimCreateSerializer(serializers.Serializer):
+    member_id = serializers.CharField()
+    provider_id = serializers.CharField()
+    procedure_code = serializers.CharField()
+    diagnosis_code = serializers.CharField()
+    claim_amount = serializers.DecimalField(max_digits=12, decimal_places=2)
 
 class ClaimResponseSerializer(serializers.ModelSerializer):
     member = serializers.StringRelatedField()
