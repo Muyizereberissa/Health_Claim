@@ -60,6 +60,15 @@ source venv/bin/activate
 
 python manage.py runserver
 
+### Improvements for production
+
+- Change database from SQLite to PostgreSQL 
+- Use environment variables for secrets, configure HTTPS
+- Add caching, async tasks for claim validation if heavy
+- Deployment: Docker,  CI/CD pipeline
+- Add integration tests, API tests
+
+
 API: http://127.0.0.1:8000/api/claims/
 
 Admin: http://127.0.0.1:8000/admin/
