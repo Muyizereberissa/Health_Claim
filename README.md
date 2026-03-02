@@ -39,11 +39,9 @@ Provides REST API endpoints to **submit new claims** and **retrieve claim status
 ```bash
 git clone <your-repo-link>
 cd health_claims
-```bash
 
 ### 2. Create and activate a virtual environment
 
-```bash
 # Windows PowerShell
 python -m venv venv
 .\venv\Scripts\activate
@@ -53,19 +51,15 @@ python -m venv venv
 source venv/bin/activate
 
 ### Install dependencies
-```bash
+
  pip install -r requirements.txt
- ```bash
 
 ### Apply migrations
-```bash
  python manage.py migrate
- ```bash
 
 ### Run server
-```bash
+
 python manage.py runserver
-```bash
 
 API: http://127.0.0.1:8000/api/claims/
 
