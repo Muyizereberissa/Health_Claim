@@ -1,4 +1,4 @@
-# 🏥 Health Claims API
+# Health Claims API
 
 A minimal backend service simulating a **health insurance claim workflow**.  
 Provides REST API endpoints to **submit new claims** and **retrieve claim status**, with simple validation for:
