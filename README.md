@@ -1,6 +1,6 @@
 # Health Claims API
 
-A minimal backend service simulating a **health insurance claim workflow**.  
+This repository contains a minimal backend service that simulates a **health insurance claim workflow**.  
 Provides REST API endpoints to **submit new claims** and **retrieve claim status**, with simple validation for:
 
 - Member eligibility  
@@ -31,7 +31,6 @@ Provides REST API endpoints to **submit new claims** and **retrieve claim status
   - `ClaimCreateSerializer` – input for POST requests  
   - `ClaimResponseSerializer` – structured output for GET requests  
 - **Unit Tests:** Tests cover claim creation, fraud detection, and inactive member rejection.
-
 
 ## Getting Started
 
