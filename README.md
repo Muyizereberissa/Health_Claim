@@ -36,8 +36,8 @@ Provides REST API endpoints to **submit new claims** and **retrieve claim status
 
 ### 1. Clone the repository
 
-```bash
-git clone <your-repo-link>
+
+git clone <https://github.com/Muyizereberissa/Health_Claim.git>
 cd health_claims
 
 ### 2. Create and activate a virtual environment
